@@ -26,7 +26,7 @@ window.onscroll = () => {
 // read more
 function readMore() {
     var moreText = document.getElementById("more");
-    var button = document.getElementById("read-more")[0];
+    var button = document.getElementById("read-more");
   
     if (moreText.style.display === "none") {
       moreText.style.display = "inline";
@@ -47,15 +47,18 @@ window.onbeforeunload = () => {
 // scroll reveal
 ScrollReveal({ 
     reset: true,
-    distance: '80px',
+    distance: '15px',
     duration: 2000,
-    delay: 200 
+    delay: 500,
+    // once: true
 });
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .about-container, .projects-box, .contact form, .skills-container', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+document.addEventListener('DOMContentLoaded', function() {
+  ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+  ScrollReveal().reveal('.home-img, .about-container, .projects-box, .contact form, .skills-container', { origin: 'bottom' });
+  ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+  ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+});
 
 // typed js
 const typed = new Typed('.multiple-text', {
