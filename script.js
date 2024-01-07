@@ -17,6 +17,10 @@ window.onscroll = () => {
         };
     });
 
+    document.getElementById('menu-icon').addEventListener('click', () => {
+    document.querySelector('header nav').classList.toggle('active');
+});
+
     // sticky navbar
     let header = document.querySelector('header');
 
@@ -54,8 +58,10 @@ ScrollReveal({
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  ScrollReveal().reveal('.projects h2', { origin: 'top', distance: '15px', duration: 1000, delay: 500 });
+  ScrollReveal().reveal('.projects-container .projects-box', { origin: 'bottom', distance: '15px', duration: 1000, delay: 500, interval: 200 });
   ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-  ScrollReveal().reveal('.home-img, .about-container, .projects-box, .contact form, .skills-container', { origin: 'bottom' });
+  ScrollReveal().reveal('.home-img, .about-container, .contact form, .skills-container', { origin: 'bottom' });
   ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
   ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 });
