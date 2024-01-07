@@ -28,6 +28,8 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
+    overflow-x: hidden;
 }
 
 section{
@@ -290,10 +292,17 @@ span{
 }
 
 .skills-container{
-    display: grid;
+    /* display: grid;
     grid-area: auto;
     justify-content: center;
     grid-template-columns: repeat(3, 40rem);
+    align-items: center; */
+
+    display: grid;
+    grid-area: auto;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+    /* gap: 2rem; */
     align-items: center;
 }
 
@@ -420,6 +429,10 @@ span{
     html {
         font-size: 55%;
     }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -433,6 +446,11 @@ span{
 
     .footer {
         padding: 2rem 3%;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 
@@ -479,49 +497,16 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
+
+    .projects-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
 }
 
-/* @media(max-width = 768px){
-    #menu-icon{
-        display: block;
+@media only screen and (max-width: 576px) {
+    .projects-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
     }
-
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: 0.1rem solid rgba(0,0,0,0.2);
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-        display: none;
-    }
-
-    .navbar.active{
-        display: block;
-    }
-
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    .home{
-        flex-direction: column;
-    }
-    
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    } */
-s
+}
