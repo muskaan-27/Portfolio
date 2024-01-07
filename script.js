@@ -64,15 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
   //   distance: '15px',
   //   duration: 2000,
   //   delay: 500,
-  //   interval: 200,
-  //   beforeReveal: (domEl) => {
-  //     // Add a class to delay the vanishing effect
-  //     domEl.classList.add('reveal-active');
-  //   },
-  //   beforeReset: (domEl) => {
-  //     // Remove the class to reset the vanishing effect
-  //     domEl.classList.remove('reveal-active');
-  //   },
+  //   // interval: 200,
+  //   // viewFactor: 1
+  //   // beforeReveal: (domEl) => {
+  //   //   // Add a class to delay the vanishing effect
+  //   //   domEl.classList.add('reveal-active');
+  //   // },
+  //   // beforeReset: (domEl) => {
+  //   //   // Remove the class to reset the vanishing effect
+  //   //   domEl.classList.remove('reveal-active');
+  //   // },
   // });
   ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
   ScrollReveal().reveal('.home-img, .about-container, .contact form, .skills-container', { origin: 'bottom' });
