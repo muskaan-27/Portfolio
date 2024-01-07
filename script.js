@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // typed js
 const typed = new Typed('.multiple-text', {
-    strings: ['Flutter Developer','Frontend Web Developer','Machine Learning Enthusiast','Computer Science Sophmore','Event Organizer'],
+    strings: ['Frontend Web Developer','Machine Learning Enthusiast','Computer Science Sophmore','Executive Director at Ecell','Flutter Developer'],
     typeSpeed: 85,
     backSpeed: 70,
     backDelay: 1000,
